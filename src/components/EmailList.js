@@ -2,6 +2,7 @@ import { Checkbox, IconButton } from '@material-ui/core'
 import { ArrowDropDown, ChevronLeft, ChevronRight, Inbox, KeyboardHide, LocalOffer, MoreVert, People, Redo, Settings } from '@material-ui/icons'
 import React from 'react'
 import './EmailList.css'
+import EmailRow from './EmailRow'
 import Section from './Section'
 
 function EmailList() {
@@ -48,6 +49,14 @@ function EmailList() {
                 <Section Icon={Inbox} title='Primary' color='red' selected/>
                 <Section Icon={People} title='Social' color='#1A73E8' />
                 <Section Icon={LocalOffer} title='Promotions' color='green' /> 
+            </div>
+
+            <div className="emailList__list">
+                
+                <EmailRow title="Email1" subject="Hey YO!" description="Test Email" time="10pm"/>
+                <EmailRow title="Email1" subject="Hey YO!" description="Test Email" time="10pm"/>
+
+            
             </div>
             
         </div>
