@@ -69,8 +69,8 @@ function EmailList() {
                 <EmailRow key={id} id={id} title={to} subject={subject} description={message} time={new Date(timestamp?.seconds * 1000).toUTCString()}/>
 
                 ))}
-                <EmailRow title="Email1" subject="Hey YO!" description="Test Email" time="10pm"/>
-                <EmailRow title="Email1" subject="Hey YO!" description="Test Email" time="10pm"/>
+                {/* <EmailRow title="Email1" subject="Hey YO!" description="Test Email" time="10pm"/>
+                <EmailRow title="Email1" subject="Hey YO!" description="Test Email" time="10pm"/> */}
 
             
             </div>
