@@ -6,8 +6,13 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Mail from './components/Mail';
 import EmailList from './components/EmailList';
 import SendMail from './components/SendMail';
+import { useSelector } from 'react-redux';
+import { selectSendMessageIsOpen } from './features/mailSlice'
 
 function App() {
+
+  //Importing sendmessage state from redux using selector and passing const value to it which is by default false
+  const sendMessageIsOpen = useSelector(selectSendMessageIsOpen);
   return (
     <Router>
       <div className="app">
@@ -29,7 +34,8 @@ function App() {
           </Switch>
         </div>
 
-        <SendMail/>
+        {/*if selectsendmessageisopen is true then compose part open otherwise not*/}
+        {sendMessageIsOpen && <SendMail/>}
       
       </div>
     </Router>

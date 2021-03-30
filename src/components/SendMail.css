@@ -55,3 +55,12 @@
 .sendMail__message{
     flex: 1;
 }
+
+.sendMail__error{
+    background-color: white;
+    color: red;
+    /* padding: 2px;  */
+    text-align: right;
+    width: 496px;
+    margin-left: 2px;
+}
